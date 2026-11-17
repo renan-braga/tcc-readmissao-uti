@@ -1,0 +1,45 @@
+# Deny-by-default: só código e o texto do TCC são versionados.
+# Dados do MIMIC-IV são regidos pela DUA do PhysioNet e NÃO podem ser
+# redistribuídos — nem brutos, nem derivados em nível de paciente.
+/*
+!/.gitignore
+!/app/
+!/scripts/
+!/template/
+
+# Dados derivados do MIMIC-IV (nível paciente) e modelos treinados
+*.csv
+*.parquet
+*.feather
+*.joblib
+*.pkl
+*.db
+*.sqlite*
+
+# Saídas de experimentos e logs
+scripts/resultados/
+scripts/logs/
+*.log
+
+# LaTeX: artefatos de build e sobras do template IEEE
+template/*.aux
+template/*.bbl
+template/*.blg
+template/*.out
+template/*.fdb_latexmk
+template/*.fls
+template/*.synctex.gz
+template/*.toc
+template/a1.png
+template/a2.png
+template/a3.png
+template/fig1.png
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+.ipynb_checkpoints/
+
+# SO
+.DS_Store
