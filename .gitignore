@@ -3,6 +3,7 @@
 # redistribuídos — nem brutos, nem derivados em nível de paciente.
 /*
 !/.gitignore
+!/README.md
 !/app/
 !/scripts/
 !/template/
